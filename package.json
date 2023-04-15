@@ -1,0 +1,49 @@
+{
+  "name": "fitness",
+  "author": "yash ghadiya",
+  "homepage": "https://evenmore.co.in/",
+  "licence": "MIT",
+  "version": "1.0.0",
+  "private": false,
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@emotion/cache": "^11.7.1",
+    "@emotion/react": "^11.9.0",
+    "@emotion/server": "^11.4.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/icons-material": "^5.8.0",
+    "@mui/lab": "^5.0.0-alpha.82",
+    "@mui/material": "^5.8.0",
+    "@mui/styles": "^5.8.0",
+    "@tiptap/react": "^2.0.0-beta.112",
+    "@tiptap/starter-kit": "^2.0.0-beta.188",
+    "axios": "^0.27.2",
+    "chart.js": "^3.7.1",
+    "date-fns": "^2.28.0",
+    "downshift": "^6.1.7",
+    "formik": "^2.1.5",
+    "framer-motion": "^6.3.11",
+    "history": "^5.3.0",
+    "mdbreact": "^5.2.0",
+    "next": "^12.1.6",
+    "npm": "^9.6.4",
+    "nprogress": "^0.2.0",
+    "prop-types": "^15.8.1",
+    "react": "^17.0.2",
+    "react-chartjs-2": "^3.0.4",
+    "react-dom": "^17.0.2",
+    "react-number-format": "^4.9.3",
+    "react-perfect-scrollbar": "^1.5.8",
+    "style-it": "^2.1.4",
+    "uuid": "^8.3.0",
+    "yup": "^0.32.9"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-next": "12.0.3-canary.7"
+  }
+}
