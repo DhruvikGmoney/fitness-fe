@@ -18,14 +18,14 @@ const DashboardLayoutRoot = styled('div')(({ theme }) => ({
 export const DashboardLayout = (props) => {
   const { children } = props;
   const [isSidebarOpen, setSidebarOpen] = useState(true);
-  const [isLogin, setLogin] = useState(true)
+  const [isLogin, setLogin] = useState(false)
 
   useEffect(
     () => {
       const islogin = localStorage.getItem('isLogin');
       if (islogin === null) {
-        // setLogin(false);
-        setLogin(true);
+        setLogin(false);
+        // setLogin(true);
 
       } else if (islogin === false) {
         setLogin(false);
