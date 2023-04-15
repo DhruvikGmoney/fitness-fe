@@ -52,8 +52,6 @@ const AccountDetails = (props) => {
 
         }),
         onSubmit: () => {
-            // console.log('taped')
-            // onSave();
         }
     });
 

@@ -23,7 +23,6 @@ export const DashboardLayout = (props) => {
   useEffect(
     () => {
       const islogin = localStorage.getItem('isLogin');
-      console.log(islogin);
       if (islogin === null) {
         // setLogin(false);
         setLogin(true);

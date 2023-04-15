@@ -32,8 +32,6 @@ export const TagsDetails = (props) => {
 
         }),
         onSubmit: () => {
-            // console.log('taped')
-            // onSave();
         }
     });
 

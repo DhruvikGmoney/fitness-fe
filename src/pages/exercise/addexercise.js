@@ -91,8 +91,6 @@ export const ExcerciseDetails = (props) => {
                 EQUIPMENT: Equipment,
                 LEVEL: level
             }
-            console.log(data)
-
             addExercise(data).then((res) => {
                 if (res.code === 200) {
                     setloading(false)

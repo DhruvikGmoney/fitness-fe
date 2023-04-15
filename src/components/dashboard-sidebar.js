@@ -26,6 +26,11 @@ const items = [
     title: 'Dashboards'
   },
   {
+    href: '/users',
+    icon: (<UsersIcon fontSize="small" />),
+    title: 'Users'
+  },
+  {
     href: '/allworkouts',
     icon: (<Workout fontSize="small" />),
     title: 'All Workouts'
@@ -79,11 +84,6 @@ const items = [
     href: '/subscription',
     icon: (<Subscription fontSize="small" />),
     title: 'Subscriptions'
-  },
-  {
-    href: '/users',
-    icon: (<UsersIcon fontSize="small" />),
-    title: 'Users'
   },
 ];
 

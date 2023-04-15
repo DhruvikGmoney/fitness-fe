@@ -60,7 +60,6 @@ const LevelDetails = (props) => {
             setisloading(true)
             addLevel(formik.values.title, formik.values.rate, imageurl).then((res) => {
                 if (res.code === 200) {
-                  console.log(addLevel)
                     setisloading(false)
                     history.back();
                 }

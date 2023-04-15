@@ -62,7 +62,6 @@ export const WorkoutListResults = ({ customers, ...rest }) => {
 
   function changestatus(id) {
     changeStatus(id, 'Workout').then((res) => {
-      console.log(res);
       window.location.reload();
     })
   }

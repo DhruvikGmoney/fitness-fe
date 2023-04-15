@@ -36,8 +36,6 @@ export const CategoryDetails = (props) => {
 
     }),
     onSubmit: () => {
-      // console.log('taped')
-      // onSave();
     }
   });
 

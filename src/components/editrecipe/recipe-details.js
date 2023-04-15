@@ -50,8 +50,6 @@ export const RecipeDetails = (props) => {
 
         }),
         onSubmit: () => {
-            // console.log('taped')
-            // onSave();
         }
     });
 

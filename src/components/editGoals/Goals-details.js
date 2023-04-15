@@ -18,8 +18,6 @@ import { useState } from 'react';
 
 
 export const GoalsDetails = (props) => {
-  console.log("dsdddd", props)
-
     var [isloading, setisloading] = useState(false);
 
     const formik = useFormik({
@@ -40,8 +38,6 @@ export const GoalsDetails = (props) => {
 
         }),
         onSubmit: () => {
-            // console.log('taped')
-            // onSave();
         }
     });
 
@@ -49,7 +45,6 @@ export const GoalsDetails = (props) => {
 
         if (formik.values.title !== '' &&  formik.values.description !== ''){
             setisloading(true)
-            console.log(updateGoals)
             updateGoals(props.goaldata._id, formik.values.title, formik.values.description, props.image).then((res) => {
                 if (res.code === 200) {
                     setisloading(false)

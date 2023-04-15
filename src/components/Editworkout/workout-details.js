@@ -151,7 +151,6 @@ export const AccountProfileDetails = (props) => {
 
 
   const handleDay1 = (event) => {
-    console.log(event.target.value)
     const {
       target: { value },
     } = event;
@@ -161,8 +160,6 @@ export const AccountProfileDetails = (props) => {
   };
 
   const handleDay2 = (event) => {
-    console.log(event.target.value)
-
     const {
       target: { value },
     } = event;
@@ -172,8 +169,6 @@ export const AccountProfileDetails = (props) => {
   };
 
   const handleDay3 = (event) => {
-    console.log(event.target.value)
-
     const {
       target: { value },
     } = event;
@@ -183,8 +178,6 @@ export const AccountProfileDetails = (props) => {
   };
 
   const handleDay4 = (event) => {
-    console.log(event.target.value)
-
     const {
       target: { value },
     } = event;
@@ -194,8 +187,6 @@ export const AccountProfileDetails = (props) => {
   };
 
   const handleDay5 = (event) => {
-    console.log(event.target.value)
-
     const {
       target: { value },
     } = event;
@@ -205,8 +196,6 @@ export const AccountProfileDetails = (props) => {
   };
 
   const handleDay6 = (event) => {
-    console.log(event.target.value)
-
     const {
       target: { value },
     } = event;
@@ -216,8 +205,6 @@ export const AccountProfileDetails = (props) => {
   };
 
   const handleDay7 = (event) => {
-    console.log(event.target.value)
-
     const {
       target: { value },
     } = event;

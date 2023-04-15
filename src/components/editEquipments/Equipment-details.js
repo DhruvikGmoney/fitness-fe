@@ -36,8 +36,6 @@ export const EquipmentDetails = (props) => {
 
         }),
         onSubmit: () => {
-            // console.log('taped')
-            // onSave();
         }
     });
 

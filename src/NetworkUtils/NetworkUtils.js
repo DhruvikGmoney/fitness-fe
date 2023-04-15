@@ -32,7 +32,6 @@ async function getAllUsers() {
     var url = BASEURL + 'User/Get_All_Users';
     try {
         response = await axios.get(url);
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -46,7 +45,6 @@ async function getUserData(id) {
     var url = BASEURL + 'User/Get_User_Data/' + id;
     try {
         response = await axios.get(url);
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -57,7 +55,6 @@ async function deteleuser(id) {
     var url = BASEURL + 'User/Delete/' + id;
     try {
         response = await axios.delete(url);
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -66,8 +63,6 @@ async function deteleuser(id) {
 
 async function updateUser(id, data) {
     var response = '';
-
-    console.log(data)
     var url = BASEURL + 'User/Update/' + id;
     try {
         response = await axios.put(url, JSON.stringify(data), {
@@ -75,7 +70,6 @@ async function updateUser(id, data) {
                 'Content-Type': 'application/json',
             }
         })
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -90,7 +84,6 @@ async function getAllWorkouts() {
     var url = BASEURL + 'Workout/Get_All_Workouts';
     try {
         response = await axios.get(url);
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -102,7 +95,6 @@ async function getSingleWorkout(id) {
     var url = BASEURL + 'Workout/Get_Workout_Data/' + id;
     try {
         response = await axios.get(url);
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -112,14 +104,12 @@ async function getSingleWorkout(id) {
 async function deleteWorkout(id) {
     var response = '';
     var url = BASEURL + 'Workout/Delete/' + id;
-    console.log(url)
     try {
         response = await axios.delete(url, {
             headers: {
                 'Content-Type': 'application/json',
             }
         });
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -153,7 +143,7 @@ async function updateWorkout(id, title, description, goal, level, bodypart, equi
         "DAY_7": day7,
         "STATUS": "Active"
     };
-    console.log(data)
+
     var url = BASEURL + 'Workout/Update/' + id;
     try {
         response = await axios.put(url, JSON.stringify(data), {
@@ -161,7 +151,6 @@ async function updateWorkout(id, title, description, goal, level, bodypart, equi
                 'Content-Type': 'application/json',
             }
         })
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -194,7 +183,6 @@ async function addWorkout(title, description, goal, level, bodypart, equipment, 
         "DAY_7": day7,
         "STATUS": "Active"
     };
-    console.log(data)
     var url = BASEURL + 'Workout/Add_Workout';
     try {
         response = await axios.post(url, JSON.stringify(data), {
@@ -202,7 +190,6 @@ async function addWorkout(title, description, goal, level, bodypart, equipment, 
                 'Content-Type': 'application/json',
             }
         })
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -218,7 +205,6 @@ async function getAllBodyparts() {
     var url = BASEURL + 'Bodyparts/Get_All_Bodyparts';
     try {
         response = await axios.get(url);
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -230,7 +216,6 @@ async function getsinglebodypart(id) {
     var url = BASEURL + 'Bodyparts/Get_Bodypart_Data/' + id;
     try {
         response = await axios.get(url);
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -251,7 +236,6 @@ async function updatebodypart(id, title, image) {
                 'Content-Type': 'application/json',
             }
         })
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -271,7 +255,6 @@ async function addBodypart(title, image) {
                 'Content-Type': 'application/json',
             }
         })
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -281,14 +264,12 @@ async function addBodypart(title, image) {
 async function deleteBodypart(id) {
     var response = '';
     var url = BASEURL + 'Bodyparts/Delete/' + id;
-    console.log(url)
     try {
         response = await axios.delete(url, {
             headers: {
                 'Content-Type': 'application/json',
             }
         });
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -304,7 +285,6 @@ async function getAllEquipments() {
     var url = BASEURL + 'Equipments/Get_All_Equipments';
     try {
         response = await axios.get(url);
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -316,7 +296,6 @@ async function getsingleEquipment(id) {
     var url = BASEURL + 'Equipments/Get_Equipment_Data/' + id;
     try {
         response = await axios.get(url);
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -336,7 +315,6 @@ async function updateEquipment(id, title, image) {
                 'Content-Type': 'application/json',
             }
         })
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -356,7 +334,6 @@ async function addEquipment(title, image) {
                 'Content-Type': 'application/json',
             }
         })
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -366,14 +343,12 @@ async function addEquipment(title, image) {
 async function deleteEquipment(id) {
     var response = '';
     var url = BASEURL + 'Equipments/Delete/' + id;
-    console.log(url)
     try {
         response = await axios.delete(url, {
             headers: {
                 'Content-Type': 'application/json',
             }
         });
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -389,7 +364,6 @@ async function getAllCategory() {
     var url = BASEURL + 'Categories/Get_All_Categories';
     try {
         response = await axios.get(url);
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -402,7 +376,6 @@ async function getsingleCategory(id) {
 
     try {
         response = await axios.get(url);
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -422,7 +395,6 @@ async function updateCategory(id, title, image) {
                 'Content-Type': 'application/json',
             }
         })
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -442,7 +414,6 @@ async function addCategory(title, image) {
                 'Content-Type': 'application/json',
             }
         })
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -452,14 +423,12 @@ async function addCategory(title, image) {
 async function deleteCategory(id) {
     var response = '';
     var url = BASEURL + 'Categories/Delete/' + id;
-    console.log(url)
     try {
         response = await axios.delete(url, {
             headers: {
                 'Content-Type': 'application/json',
             }
         });
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -476,7 +445,6 @@ async function getAllTags() {
     var url = BASEURL + 'Tags/Get_All_Tag';
     try {
         response = await axios.get(url);
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -488,7 +456,6 @@ async function getsingleTags(id) {
     var url = BASEURL + 'Tags/Get_Tag_Data/' + id;
     try {
         response = await axios.get(url);
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -507,7 +474,6 @@ async function updateTags(id, title) {
                 'Content-Type': 'application/json',
             }
         })
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -526,7 +492,6 @@ async function addTags(title) {
                 'Content-Type': 'application/json',
             }
         })
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -536,14 +501,12 @@ async function addTags(title) {
 async function deleteTags(id) {
     var response = '';
     var url = BASEURL + 'Tags/Delete/' + id;
-    console.log(url)
     try {
         response = await axios.delete(url, {
             headers: {
                 'Content-Type': 'application/json',
             }
         });
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -559,7 +522,6 @@ async function getAllLevel() {
     var url = BASEURL + 'Levels/Get_all_Levels';
     try {
         response = await axios.get(url);
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -571,7 +533,6 @@ async function getsingleLevel(id) {
     var url = BASEURL + 'Levels/Get_Level_Data/' + id;
     try {
         response = await axios.get(url);
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -592,7 +553,6 @@ async function updateLevel(id, title, rate, image) {
                 'Content-Type': 'application/json',
             }
         })
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -613,7 +573,6 @@ async function addLevel(title, rate, image) {
                 'Content-Type': 'application/json',
             }
         })
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -623,14 +582,12 @@ async function addLevel(title, rate, image) {
 async function deleteLevel(id) {
     var response = '';
     var url = BASEURL + 'Levels/Delete/' + id;
-    console.log(url)
     try {
         response = await axios.delete(url, {
             headers: {
                 'Content-Type': 'application/json',
             }
         });
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -646,7 +603,6 @@ async function getAllGoals() {
     var url = BASEURL + 'Goals/Get_All_Goals';
     try {
         response = await axios.get(url);
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -658,7 +614,6 @@ async function getsingleGoals(id) {
     var url = BASEURL + 'Goals/Get_Goal_Data/' + id;
     try {
         response = await axios.get(url);
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -681,7 +636,6 @@ async function updateGoals(id, title, image, description) {
                 'Content-Type': 'application/json',
             }
         })
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -702,7 +656,6 @@ async function addGoals(title, description, image) {
                 'Content-Type': 'application/json',
             }
         })
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -712,14 +665,13 @@ async function addGoals(title, description, image) {
 async function deleteGoals(id) {
     var response = '';
     var url = BASEURL + 'Goals/Delete/' + id;
-    console.log(url)
+
     try {
         response = await axios.delete(url, {
             headers: {
                 'Content-Type': 'application/json',
             }
         });
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -735,7 +687,6 @@ async function getAllPost() {
     var url = BASEURL + 'Post/Get_All_Posts';
     try {
         response = await axios.get(url);
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -747,7 +698,6 @@ async function getsinglePost(id) {
     var url = BASEURL + 'Post/Get_Post_Data/' + id;
     try {
         response = await axios.get(url);
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -771,7 +721,6 @@ async function updatePost(id, title, description, tag, image) {
                 'Content-Type': 'application/json',
             }
         })
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -788,7 +737,6 @@ async function addPost(title, description, tag, image) {
         "FEATURED": "YES",
         "STATUS": "Active"
     };
-    console.log(data)
     var url = BASEURL + 'Post/Add_Posts_Data';
     try {
         response = await axios.post(url, JSON.stringify(data), {
@@ -796,7 +744,6 @@ async function addPost(title, description, tag, image) {
                 'Content-Type': 'application/json',
             }
         })
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -806,14 +753,12 @@ async function addPost(title, description, tag, image) {
 async function deletePost(id) {
     var response = '';
     var url = BASEURL + 'Post/Delete/' + id;
-    console.log(url)
     try {
         response = await axios.delete(url, {
             headers: {
                 'Content-Type': 'application/json',
             }
         });
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -829,7 +774,6 @@ async function getAllRecipe() {
     var url = BASEURL + 'Recipe/Get_All_Recipe';
     try {
         response = await axios.get(url);
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -841,7 +785,6 @@ async function getsingleRecipe(id) {
     var url = BASEURL + 'Recipe/Get_Recipe_Data/' + id;
     try {
         response = await axios.get(url);
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -851,14 +794,12 @@ async function getsingleRecipe(id) {
 async function updateRecipe(id, data) {
     var response = '';
     var url = BASEURL + 'Recipe/Update/' + id;
-    console.log(data);
     try {
         response = await axios.put(url, JSON.stringify(data), {
             headers: {
                 'Content-Type': 'application/json',
             }
         })
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -866,7 +807,6 @@ async function updateRecipe(id, data) {
 }
 
 async function addRecipe(data) {
-    console.log(data)
     var response = '';
 
     var url = BASEURL + 'Recipe/Add_Recipe_Data';
@@ -876,7 +816,6 @@ async function addRecipe(data) {
                 'Content-Type': 'application/json',
             }
         })
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -886,14 +825,12 @@ async function addRecipe(data) {
 async function deleteRecipe(id) {
     var response = '';
     var url = BASEURL + 'Recipe/Delete/' + id;
-    console.log(url)
     try {
         response = await axios.delete(url, {
             headers: {
                 'Content-Type': 'application/json',
             }
         });
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -910,7 +847,6 @@ async function getAllExercise() {
     var url = BASEURL + 'Exercises/Get_All_Exercises';
     try {
         response = await axios.get(url);
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -922,7 +858,6 @@ async function getsingleExercise(id) {
     var url = BASEURL + 'Exercises/Get_Exercise_Data/' + id;
     try {
         response = await axios.get(url);
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -932,14 +867,12 @@ async function getsingleExercise(id) {
 async function updateExercise(id, data) {
     var response = '';
     var url = BASEURL + 'Exercises/Update/' + id;
-    console.log(data);
     try {
         response = await axios.put(url, JSON.stringify(data), {
             headers: {
                 'Content-Type': 'application/json',
             }
         })
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -956,7 +889,6 @@ async function addExercise(data) {
                 'Content-Type': 'application/json',
             }
         })
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -966,14 +898,12 @@ async function addExercise(data) {
 async function deleteExercise(id) {
     var response = '';
     var url = BASEURL + 'Exercises/Delete/' + id;
-    console.log(url)
     try {
         response = await axios.delete(url, {
             headers: {
                 'Content-Type': 'application/json',
             }
         });
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -989,7 +919,6 @@ async function getAllSubscription() {
     var url = BASEURL + 'Subscription/Get_All_Subscriptions';
     try {
         response = await axios.get(url);
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -1001,7 +930,6 @@ async function getsingleSubscription(id) {
     var url = BASEURL + 'Subscription/Get_Subscriptions_Data/' + id;
     try {
         response = await axios.get(url);
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -1011,14 +939,12 @@ async function getsingleSubscription(id) {
 async function updateSubscription(id, data) {
     var response = '';
     var url = BASEURL + 'Subscription/Update/' + id;
-    console.log(data);
     try {
         response = await axios.put(url, JSON.stringify(data), {
             headers: {
                 'Content-Type': 'application/json',
             }
         })
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -1029,14 +955,12 @@ async function addSubscription(data) {
     var response = '';
 
     var url = BASEURL + 'Subscription/Add_Subscription_Data';
-    console.log(data)
     try {
         response = await axios.post(url, JSON.stringify(data), {
             headers: {
                 'Content-Type': 'application/json',
             }
         })
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -1046,14 +970,12 @@ async function addSubscription(data) {
 async function deleteSubscription(id) {
     var response = '';
     var url = BASEURL + 'Subscription/Delete/' + id;
-    console.log(url)
     try {
         response = await axios.delete(url, {
             headers: {
                 'Content-Type': 'application/json',
             }
         });
-        console.log(response.data)
         return await response.data;
     } catch (error) {
         return [];
@@ -1065,7 +987,6 @@ async function deleteSubscription(id) {
 
 async function changeStatus(id, path) {
     var response = '';
-    console.log(path)
     var url = BASEURL + path + '/Status/' + id;
     try {
         response = await axios.post(url);

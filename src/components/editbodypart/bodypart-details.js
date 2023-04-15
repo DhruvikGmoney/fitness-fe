@@ -36,8 +36,6 @@ export const BodypartDetails = (props) => {
 
     }),
     onSubmit: () => {
-      // console.log('taped')
-      // onSave();
     }
   });
 
@@ -45,7 +43,6 @@ export const BodypartDetails = (props) => {
 
     if (formik.values.title !== '') {
       setisloading(true)
-      console.log(props.image)
       updatebodypart(props.bodypartdata._id, formik.values.title, props.image).then((res) => {
         if (res.code === 200) {
           setisloading(false)

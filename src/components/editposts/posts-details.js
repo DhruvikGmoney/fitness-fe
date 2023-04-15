@@ -38,8 +38,6 @@ export const PostsDetails = (props) => {
 
         }),
         onSubmit: () => {
-            // console.log('taped')
-            // onSave();
         }
     });
     var [tag, settag] = useState(props.postdata.TAG);

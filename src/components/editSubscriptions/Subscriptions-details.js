@@ -45,8 +45,6 @@ export const SubscriptionsDetails = (props) => {
 
         }),
         onSubmit: () => {
-            // console.log('taped')
-            // onSave();
         }
     });
 
